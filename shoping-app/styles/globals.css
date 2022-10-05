@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities ;
+
+@font-face {
+  font-family: "Graphik Medium";
+  src: url(../public/fonts/GraphikMedium.otf);
+};
+@font-face {
+  font-family: "Graphik Light";
+  src: url(../public/fonts/GraphikLight.otf);
+};
+@font-face {
+  font-family: "Graphik Bold";
+  src: url(../public/fonts/GraphikBold.otf);
+}
+
+
+html,
+
+body {
+  padding: 0;
+  margin: 0;
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 , p {
+  font-family: "Graphik Medium";
+}
