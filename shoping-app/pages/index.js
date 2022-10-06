@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import {Button}from "../components/elements/Button"
 import { Banner } from '../components/Banner'
 import { CategoriesSection } from '../components/CategoriesSection'
+import { Footer } from '../components/Footer'
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
     <div className={styles.container}>
       <Banner/>
       <CategoriesSection />
+      <Footer />
     </div>
   )
 }
