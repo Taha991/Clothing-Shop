@@ -27,8 +27,8 @@ const Cart  = () => {
         })
       }
       <div className="flex md:max-w-screen-lg mx-auto justify-end">
-        <Button variant="dark">Check Out</Button>
-      </div>
+            <Button variant="dark">Check Out</Button>
+          </div>
     </div>
   )
 }

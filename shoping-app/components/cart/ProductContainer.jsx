@@ -1,6 +1,6 @@
 import Image from "next/image";
-import NumberCounter from "../product/NumberCounter";
-import { useCart } from "../../context/cart-context";
+import NumberCounter from '../../components/product/NumberCounter';
+import { useCart } from '../../context/cart-context';
 
 
 const imageLoader = ({ src }) => {
@@ -11,9 +11,9 @@ const ProductContainer = ({ product }) => {
     const { dispatch } = useCart();
 
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:max-w-screen-lg mx-auto my-6 border rounded border-slate-300 p-3'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:max-w-screen-lg mx-auto my-6 border p-5 rounded border-slate-300'>
         {
-            product && 
+            product &&
             <>
                 <div className='cols-span-2'>
                     <div className="flex items-center justify-center">
@@ -27,6 +27,7 @@ const ProductContainer = ({ product }) => {
                     </div>
                     <div className='product-controls flex flex-row items-end'>
                         <NumberCounter quantity={product.qt} updateQuantity={(quantity) => dispatch({ type: 'updateAmount', id: product.id, quantity: quantity})} />
+
                     </div>
                 </div>
             </>
@@ -35,4 +36,4 @@ const ProductContainer = ({ product }) => {
     )
 }
 
-export default ProductContainer;
+export default ProductContainer; 
