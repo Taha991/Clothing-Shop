@@ -3,6 +3,7 @@ import { useEffect , useState } from "react";
 import {PRODUCTS} from "../../data/products";
 import Image from "next/image";
 import { Button } from "../../components/elements/Button";
+import NumberCounter from "../../components/product/NumberConter";
 
 const imageLoader = ({src}) => {
   return `/images/products/${src}`
@@ -30,6 +31,9 @@ const ProductPage = () => {
       setLoading(false)
     }
   },[productId])
+  const updateQuantity  = (newQuantity) =>{
+    setQuantity(newQuantity);
+  }
   if(notFound) {
     return (
       <div>Product Not Found</div>
@@ -56,7 +60,8 @@ const ProductPage = () => {
             <h1>{product.title}</h1>
             <p className="font-graphikLight">{product.description}</p>
           </div>
-          <div className="product-control flex flex-row items-end">
+          <div className="product-controls flex flex-row items-end justify-between">
+            <NumberCounter quantity={quantity} updateQuantity={updateQuantity}/>
             <Button variant="dark">Add to Cart</Button>
           </div>
         </div>
