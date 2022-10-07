@@ -3,7 +3,7 @@ import { useEffect , useState } from "react";
 import {PRODUCTS} from "../../data/products";
 import Image from "next/image";
 import { Button } from "../../components/elements/Button";
-import NumberCounter from "../../components/product/NumberConter";
+import NumberCounter from "../../components/product/NumberCounter";
 import {useCart} from "../../context/cart-context"
 
 const imageLoader = ({src}) => {

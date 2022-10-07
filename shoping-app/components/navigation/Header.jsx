@@ -23,7 +23,7 @@ export const Header = () => {
         <div className='flex items-center space-x-5'>
          <NavButton url="/search"><Search /></NavButton> 
           <NavButton url="/user"><User /></NavButton>
-          <NavButton url="/card">
+          <NavButton url="/cart">
             <div className='relative'>
               <Cart />
               {state.products.length > 0 && 
