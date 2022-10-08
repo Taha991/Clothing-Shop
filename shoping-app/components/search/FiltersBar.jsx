@@ -16,7 +16,7 @@ export const FiltersBar = () => {
 
       {/* {adding accordion} */}
       <div className='flex pb-2 flex-col justify-between border-b border-slate-300'>
-       <Accordion label="categories">
+       <Accordion label="Categories">
         <>catagories Listed here</>
        </Accordion>
       </div>

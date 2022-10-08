@@ -15,10 +15,11 @@ export const Accordion = ({label , children}) => {
                 isOpen ? <UpArrowIcon height="10" width="10" /> : <DownArrowIcon height="10" width="10" />
               }
             </button>
+          </div>
             {
               isOpen && <div className="accordion-content">{children}</div> 
             }
-          </div>
+         
     </>
   )
 }
