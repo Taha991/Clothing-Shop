@@ -5,8 +5,8 @@ import ChevronRight from "../../assets/icons/chevron-right.svg";
 import clsx from 'clsx';
 import FiltersIcon from "../../assets/icons/filters.svg";
 import { FiltersBar } from './FiltersBar';
-import { Pagination } from './Pagination';
 import { Dialog, Transition } from '@headlessui/react'; 
+import { Pagination } from './Pagination';
 
 export const ResultsSummary = ({ count, currPage, resultsPerPage, onPageUpdate }) => {
     const router = useRouter();

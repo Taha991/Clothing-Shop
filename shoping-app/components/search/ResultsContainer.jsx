@@ -8,7 +8,7 @@ export const ResultsContainer = ({ currPage, resultsPerPage }) => {
     const endIndex = startIndex + resultsPerPage;
 
     const router = useRouter()
-    const { categories, colors, gender, price } = router.query;
+    const { categories, colors, gender, price , searchText } = router.query;
     const [products, setProducts] = useState(PRODUCTS);
     const genderCodes = {
         "Female": "F",
