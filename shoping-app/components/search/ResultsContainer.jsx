@@ -30,7 +30,7 @@ export const ResultsContainer = ({ currPage, resultsPerPage }) => {
         }
 
         if (colors != undefined && JSON.parse(colors).length > 0) {
-            newProductsList = newProductsList.filter(product => JSON.parse(colors).includes(product.color))
+            newProductsList = newProductsList.filter(product => JSON.parse(colors).map((color) => color.toLowerCase()).includes(product.color))
         }
 
         if (gender != undefined && JSON.parse(gender).length > 0) {
