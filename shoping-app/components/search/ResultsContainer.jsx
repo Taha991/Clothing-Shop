@@ -16,13 +16,13 @@ export const ResultsContainer = ({ currPage, resultsPerPage }) => {
     }
 
     useEffect(() => {
-        if (categories || colors || gender || price) {
-            let updatedProducts = filterProducts(categories, colors, gender, price);
+        if (categories || colors || gender || price || searchText) {
+            let updatedProducts = filterProducts(categories, colors, gender, price , searchText);
             setProducts(updatedProducts);
         }
-    }, [categories, colors, gender, price])
+    }, [categories, colors, gender, price , searchText])
 
-    const filterProducts = (categories, colors, gender, price) => {
+    const filterProducts = (categories, colors, gender, price , searchText) => {
         let newProductsList = PRODUCTS;
 
         if (categories != undefined && JSON.parse(categories).length > 0) {
@@ -42,6 +42,10 @@ export const ResultsContainer = ({ currPage, resultsPerPage }) => {
             let minPrice = JSON.parse(price)[0];
             let maxPrice = JSON.parse(price)[1];
             newProductsList = newProductsList.filter(product => parseInt(product.price) < maxPrice && parseInt(product.price) > minPrice)
+        }
+
+        if (searchText != undefined && JSON.parse(searchText)){
+          newProductsList =  newProductsList.filter(product => product.title.includes(JSON.parse(searchText)))
         }
 
         return newProductsList;

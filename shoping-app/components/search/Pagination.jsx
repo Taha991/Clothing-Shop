@@ -39,7 +39,7 @@ export const Pagination = ({ pagesTotal, isExpanded, currentPage, onClickPage })
                         )
                     })
                 }
-                {(pagesTotal - currentPage) > 2 && <span className="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700">...</span>}
+                {(pagesTotal - currentPage) > 3 && <span className="relative inline-flex items-center border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700">...</span>}
                 <Btn key={pagesTotal} pageIndex={pagesTotal} currentPage={currentPage} onClick={onClickPage} />
             </>
         )
