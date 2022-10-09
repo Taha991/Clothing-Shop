@@ -2,7 +2,7 @@ import { useState } from "react";
 import { SearchBar } from "../components/search/SearchBar";
 import { FiltersBar } from "../components/search/FiltersBar";
 import { ResultsContainer } from "../components/search/ResultsContainer";
-import { ResultsSummary } from "../components/search/ResultSummary";
+import { ResultsSummary } from "../components/search/ResultsSummary";
 
 const SearchPage = () => {
     const [currPage, setCurrPage] = useState(1);
