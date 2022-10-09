@@ -6,6 +6,8 @@ import { NavButton } from "./NavButton";
 import { NavLink } from "./NavLink";
 import { useCart } from '../../context/cart-context';
 import { useRouter } from 'next/router';
+import Image from "next/image";
+import Logo from "../../public/images/s.png"
 
 export const Header = () => {
     const {state} = useCart();
@@ -28,9 +30,10 @@ export const Header = () => {
                 <nav className="flex justify-around bg-white/80
                     backdrop-blur-md shadow-md w-full
                     fixed top-0 left-0 right-0 z-10">
-                    <div className="navbar__menu-left flex h-100 items-center hidden space-x-8 lg:flex">
+                    <div className="navbar__menu-left flex  h-100 items-center hidden space-x-8 lg:flex">
                         <ul className="flex">
                             <NavLink 
+                            
                                 url='/search?gender="Female"'
                                 label="Women"
                                 isActive={gender == `"Female"`}
@@ -43,13 +46,14 @@ export const Header = () => {
                         </ul>
                     </div>
                     <div className="flex items-center">
-                        LOGO
+                        <Image src={Logo}  width="30px" height="30px" className="cursor-pointer" />
+                        <a href="http://localhost:3000/ "><h1 className="cursor-pointer">Quino</h1></a>
                     </div>
                     <div className="flex items-center space-x-5">
-                        <a className="flex text-gray-600 hover:text-blue-500
+                        <a className="flex text-gray-900 hover:text-blue-500
                             cursor-pointer transition-colors duration-300">
                         </a>
-                        <NavButton url="/search"><Search /></NavButton>
+                        <NavButton  url="/search"><Search /></NavButton>
                         <NavButton url="/user"><User /></NavButton>
                         <NavButton url="/cart">
                             <div className="relative">
